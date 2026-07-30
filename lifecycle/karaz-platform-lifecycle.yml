@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.karaz.app/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://docs.karaz.app/
+  evidence: Endpoint paths are version-prefixed (e.g. /v2/Users/BadgesList).
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation or Sunset/Deprecation (RFC 8594) policy is documented.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  Developer documentation (docs.karaz.app) is early-stage. No status page,
+  SLA, or formal deprecation policy is published as of this pass.

@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on karaz.app and api.karaz.app
+hosts:
+- host: https://karaz.app
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://api.karaz.app
+  note: API host did not respond to unauthenticated root/.well-known probes (connection reset / no public root).
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+  - path: /.well-known/openid-configuration
+    status: 000
+  - path: /.well-known/oauth-authorization-server
+    status: 000
+documents: []
+notes: >-
+  No .well-known discovery documents are published on the marketing host. The API
+  host (api.karaz.app) requires authentication and does not expose an unauthenticated
+  root, so well-known probes could not complete. Empty result is expected and valid.

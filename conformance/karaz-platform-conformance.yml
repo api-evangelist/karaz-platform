@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://karaz.app
+docs: https://karaz.app
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: Certification stated on karaz.app (data security / information security management).
+- id: iso-14971
+  conforms: true
+  evidence: Certification stated on karaz.app (medical-device risk management).
+- id: saudi-fda
+  conforms: true
+  evidence: Saudi Food & Drug Authority approval stated on karaz.app.
+- id: oauth2
+  conforms: false
+  evidence: API uses HTTP Bearer tokens; no OAuth2 flows documented.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error format documented as of this pass.
+- id: fhir-r4
+  conforms: false
+  evidence: EHR platform, but no published FHIR conformance or resource shapes found.
+certifications:
+- ISO 27001
+- ISO 14971
+- Saudi FDA approval
+notes: >-
+  Karaz is an AI-driven EHR platform. It publicly states ISO 27001, ISO 14971,
+  and Saudi FDA approval on its marketing site. No published FHIR/HL7 conformance
+  statement was found; the developer docs are early-stage.

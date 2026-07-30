@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.karaz.app/authentication
+docs: https://docs.karaz.app/authentication
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    The Karaz API uses HTTP Bearer token authentication. Each request must carry
+    an Authorization header using the Bearer scheme: "Authorization: Bearer {token}".
+    Tokens are user access tokens; the docs advise keeping them secret and resetting
+    if compromised. No OAuth2 authorization/token endpoints or scopes are documented.
+  sources: [https://docs.karaz.app/authentication]
+notes: >-
+  Documentation is early-stage ("full documentation coming soon"). No token endpoint,
+  refresh flow, or scope reference is published as of this pass.

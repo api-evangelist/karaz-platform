@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.karaz.app/
+docs: https://docs.karaz.app/
+base_url: https://api.karaz.app
+authentication:
+  style: bearer-token
+  header: Authorization
+  format: "Bearer {token}"
+  ref: authentication/karaz-platform-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  example: /v2/Users/BadgesList
+  notes: API resource paths are prefixed with the major version segment (e.g. /v2/...).
+response_envelope:
+  shape: object
+  fields:
+    data: The result payload (array or object).
+    status: Result status string, e.g. "success".
+  example: '{ "data": [ ... ], "status": "success" }'
+  source: https://docs.karaz.app/badges
+localization:
+  bilingual_fields: true
+  notes: >-
+    Many resources expose parallel English/Arabic fields (e.g. badge_name_e /
+    badge_name_a, badge_description_e / badge_description_a). Karaz is a
+    Saudi-based platform serving English and Arabic users.
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract is documented as of this pass.
+pagination:
+  documented: false
+  notes: No pagination parameters or cursors are documented for the published endpoints.
+rate_limiting:
+  documented: false
+error_envelope:
+  documented: false
+  notes: No formal error catalog or RFC 9457 problem+json format is published yet.
+  ref: null
+event_surface:
+  chat: WebSocket chat events are referenced ("Chat events") under Shared Karaz Resources.
