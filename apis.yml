@@ -1,7 +1,29 @@
 aid: karaz-platform
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/karaz-platform.png
 name: Karaz Platform
-description: Karaz Platform is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Karaz is an AI-driven Electronic Health Record (EHR) platform based in Saudi
+  Arabia that connects healthcare practitioners, patients, insurance providers,
+  and wellness vendors in a unified health-management ecosystem. It provides
+  real-time biometric and continuous-glucose (CGM) monitoring, AI-driven
+  treatment insights, patient and provider mobile apps, analytics and reporting,
+  rewards and community engagement, and a health-vendor marketplace, with
+  integrations across Apple, Abbott, Medtronic, Dexcom, Roche, Google, and Omron.
+  The Karaz developer API (early-stage) exposes Karaz App and Karaz Care resources
+  over HTTPS with Bearer-token authentication. Surfaced as a portfolio company of
+  500 Global and enriched by the API Evangelist pipeline from public sources.
 url: https://raw.githubusercontent.com/api-evangelist/karaz-platform/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Healthcare
+- Electronic Health Records
+- EHR
+- Health
+- Remote Patient Monitoring
+- Appointments
+- Artificial Intelligence
+- Saudi Arabia
+apis:
+- name: Karaz API
+  description: >-
+    Early-stage REST API for the Karaz platform exposing Karaz App resources
+    (e.g. gamification Badges) and Karaz Care resources (e.g. Appointments),
+    plus shared chat (WebSocket) events. HTTPS, version-prefixed paths (/v2/...),
+    and HTTP Bearer-token authentication. Responses use a { data, status } envelope.
+  humanURL: https://docs.karaz.app/
+  baseURL: https://api.karaz.app
+  tags:
+  - Healthcare
+  - EHR
+  - Appointments
+  properties:
+  - type: Documentation
+    url: https://docs.karaz.app/
+  - type: Authentication
+    url: authentication/karaz-platform-authentication.yml
+  - type: Quickstart
+    url: https://docs.karaz.app/quickstart
+  - type: Conventions
+    url: conventions/karaz-platform-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/karaz-platform-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +76,34 @@ maintainers:
 common:
 - type: Website
   url: https://karaz.app
+- type: DeveloperPortal
+  url: https://docs.karaz.app/
+- type: Documentation
+  url: https://docs.karaz.app/
+- type: GettingStarted
+  url: https://docs.karaz.app/quickstart
+- type: TermsOfService
+  url: https://karaz.app/terms
+- type: PrivacyPolicy
+  url: https://karaz.app/privacy
+- type: Authentication
+  url: authentication/karaz-platform-authentication.yml
+- type: Conventions
+  url: conventions/karaz-platform-conventions.yml
+- type: Conformance
+  url: conformance/karaz-platform-conformance.yml
+- type: Compliance
+  url: https://karaz.app
+- type: Lifecycle
+  url: lifecycle/karaz-platform-lifecycle.yml
+- type: WellKnown
+  url: well-known/karaz-platform-well-known.yml
+- type: DomainSecurity
+  url: security/karaz-platform-domain-security.yml
+- type: LLMsTxt
+  url: llms/karaz-platform-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
