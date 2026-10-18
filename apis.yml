@@ -50,6 +50,15 @@ tags:
 - Company
 - Healthcare
 - Electronic Health Records
+- Health
+- Remote Patient Monitoring
+- Appointments
+- Artificial Intelligence
+- Saudi Arabia
+tags_raw:
+- Company
+- Healthcare
+- Electronic Health Records
 - EHR
 - Health
 - Remote Patient Monitoring
@@ -66,6 +75,10 @@ apis:
   humanURL: https://docs.karaz.app/
   baseURL: https://api.karaz.app
   tags:
+  - Healthcare
+  - Electronic Health Records
+  - Appointments
+  tags_raw:
   - Healthcare
   - EHR
   - Appointments
